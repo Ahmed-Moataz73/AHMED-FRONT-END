@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- meta -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Our goal is to make the process of understanding mathematical functions faster and more accurate. Whether you're a student or a professional, our platform will support your journey towards excellence in the field of mathematics.
+Thank you for choosing us as your website in learning!">
+  <meta name="keywords" content="solve,quadratic function,equation,sign,function sign,solution set">
+  <meta name="author" content="Ahmed Moataz Mohamed Ali,Mohamed Moataz Mohamed Ali">
+
+  <title>FUNCTION SIGN</title>
+
+  <!-- icons library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- important fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&display=swap" rel="stylesheet">
+
+  <!-- styles -->
+  <style>
+    /* intro */
+
+    body {
+      background: black;
+    }
+
+    .intro {
+      font-size: sans-serif;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .intro-content {
+      background-color: #fff;
+      padding: 2rem;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+      font-family: 'Arial', sans-serif;
+    }
+
+    .intro h2 {
+      color: #333;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .intro p {
+      color: #555;
+      margin: 1rem 0;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .intro blockquote {
+      font-style: italic;
+      color: #007BFF;
+      margin: 1.5rem 0;
+      font-size: 1.5rem;
+    }
+
+    .intro button {
+      padding: 12px 25px;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      margin-top: 2rem;
+      transition: background-color 0.3s;
+    }
+
+    .intro button:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+      .intro-content {
+        width: 95%;
+        padding: 1.5rem;
+      }
+
+      .intro h2 {
+        font-size: 1.8rem;
+      }
+
+      .intro p,
+      .intro blockquote {
+        font-size: 1.3rem;
+      }
+
+      .intro button {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .intro h2 {
+        font-size: 1.4rem;
+      }
+
+      .intro p,
+      .intro blockquote {
+        font-size: 1rem;
+      }
+
+      .intro button {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* website styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: sans-serif;
+      font-weight: bold;
+      transition: 0.7s;
+    }
+
+    body {
+      background: ghostwhite;
+    }
+
+    #website {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      width: 100%;
+      height: 100vh;
+      background: white;
+      grid-template-areas: "header"
+        "main"
+        "footer";
+    }
+
+    header {
+      grid-area: header;
+      background: ghostwhite;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-flow: column wrap;
+    }
+
+    header span {
+      color: blue;
+      font-size: clamp(16px, 20px, 24px);
+    }
+
+    header p {
+      color: #000;
+      font-size: 16px;
+    }
+
+    main {
+      position: relative;
+      grid-area: main;
+      width: 100%;
+      padding: 10px;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .inputs {
+      width: 100%;
+      display: flex;
+      flex-flow: column wrap;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .equation {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      font-size: 30px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .rules {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      display: block;
+      text-align: center;
+      font-size: clamp(16px, 18px, 20px);
+      width: 100%;
+      color: blue;
+      text-align: center;
+    }
+
+    .part1 {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: deepskyblue;
+    }
+
+    .part2,
+    sup {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: red;
+    }
+
+    .inputs input {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      font-size: 1.1rem;
+      border-radius: 50%;
+      outline: none;
+      border: solid 2px darkblue;
+    }
+
+    .inputs input:focus {
+      border-color: white;
+    }
+
+    .solve-btn {
+      width: 50%;
+      margin: 10px auto;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      color: white;
+      background: blue;
+      text-align: center;
+      padding: 5px;
+    }
+
+    .solve-btn:hover {
+      scale: 0.8;
+    }
+
+    #addSub {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      display: none;
+      width: 30px;
+      height: 30px;
+      border: none;
+      background: blue;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+    #addSub:hover {
+      scale: 1.1;
+      background: red;
+    }
+
+    footer {
+      grid-area: footer;
+      width: 100%;
+      background: #000;
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      color: white;
+      font-size: clamp(14px, 16px, 18px);
+    }
+
+    footer span {
+      color: red;
+    }
+
+    footer i {
+      font-size: 30px;
+      color: red;
+      align-self: center;
+      padding: 10px;
+    }
+
+    .names {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      flex-flow: column wrap;
+    }
+
+    #result {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      width: 100%;
+      min-height: 100vh;
+      padding: 5%;
+      gap: 30px;
+      display: none;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+      background: ghostwhite;
+    }
+
+    #result fieldset {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      border: solid 5px red;
+      padding: 5px;
+      text-align: center;
+      background: ghostwhite;
+      border-radius: 10px;
+      width: 100%;
+    }
+
+    fieldset legend {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      text-align: left;
+      font-size: 20px;
+      background: ghostwhite;
+      color: blue;
+    }
+
+    #steps {
+      width: 100%;
+      font-size: clamp(18px, 20px, 22px);
+    }
+
+    #steps p {
+      margin: 20px;
+      color: #000;
+    }
+
+    #steps p.red {
+      color: red;
+      font-size: clamp(18px, 20px, 22px);
+    }
+
+    .equation {
+      font-size: clamp(20px, 22px, 24px);
+    }
+
+    .solution-div {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      margin: 20px auto;
+      display: flex;
+      width: 100%;
+      display: flex;
+      text-align: center;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 0 10px;
+      gap: 10px;
+    }
+
+    bdo.s {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      width: 100%;
+      color: blue;
+      font-weight: bolder;
+      font-size: clamp(18px, 20px, 22px);
+    }
+
+    bdo.s mark {
+      background: transparent;
+      color: red;
+      font-size: clamp(18px, 20px, 22px);
+    }
+
+    fieldset.numberLine {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #number_line {
+      max-width: 300px;
+      overflow: auto;
+    }
+
+    .end {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      width: 90%;
+      padding: 5px;
+      text-align: center;
+      font-size: 1.1rem;
+      background: red;
+      color: white;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .end:hover {
+      scale: 0.8;
+    }
+
+    #footer {
+      display: none;
+    }
+
+    /* faq-questions */
+
+    .questions-container {
+      width: 100%;
+      padding: 20px;
+      margin-bottom: 150px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: red;
+    }
+
+    .faq {
+      margin-top: 20px;
+    }
+
+    .faq-item {
+      margin-bottom: 10px;
+    }
+
+    .faq-question {
+      padding: 15px;
+      cursor: pointer;
+      background-color: #e9ecef;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-question:hover {
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .faq-answer {
+      padding: 15px;
+      display: none;
+      background-color: #f8f9fa;
+      border-radius: 5px;
+    }
+
+    .arrow {
+      transition: transform 0.2s;
+    }
+
+    .open .arrow {
+      transform: rotate(180deg);
+    }
+
+    /* ar-link */
+
+    #link {
+      border: dashed 5px white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      text-align: center;
+      width: 40px;
+      height: 40px;
+      padding: 5px;
+      text-decoration: none;
+      background: blue;
+      color: white;
+      border-radius: 50%;
+      top: 10px;
+      left: 10px;
+    }
+
+    #link:hover {
+      background: red;
+      scale: 1.1;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- intro -->
+  <div class="intro" id="intro" dir="rtl" lang="ar">
+    <div class="intro-content">
+      <h2>بسم الله الرحمن الرحيم</h2>
+      <p>
+        مرحبًا بكم في موقعنا المتخصص في تحليل الدوال الرياضية وتحديد إشاراتها! نؤمن بأن التميز في العلم والعمل هو جزء لا يتجزأ من نجاح الإنسان. كما قال الله تعالى:
+      </p>
+      <blockquote>
+        "وَفَوْقَ كُلِّ ذِي عِلْمٍ عَلِيمٌ"
+      </blockquote>
+      <p>
+        من خلال أدواتنا المبتكرة وسهلة الاستخدام، نساعدك على تحقيق أقصى استفادة في تحليل الدوال الرياضية وفهم إشاراتها، لتكون في المقدمة دائمًا في رحلتك التعليمية كما قال الله تعالى:
+      </p>
+      <blockquote>
+        "وَقُلْ رَبِّ زِدْنِي عِلْمًا" </blockquote>
+      <p>
+        كما نسعى إلى توفير بيئة تعليمية مرنة وسهلة، تمكنك من تحليل الدوال الرياضية بدقة وسرعة. انضموا إلينا لتحقيق التفوق في العلم والمعرفة.
+      </p>
+      <button id="closeBtn">هيا بنا نتعلم </button>
+    </div>
+  </div>
+
+  <!-- website -->
+  <div id="website">
+    <header id="header">
+      <span>THE SIGN OF QUADRATIC FUNCTION</span>
+      <p>IDENTIFY THE SIGN IN SIMPLE STEPS</p>
+    </header>
+
+    <main>
+      <!-- <a id="link" href="https://functionsign7en.blogspot.com/?m=0" target="_blank">AR</a> -->
+
+      <div class="inputs">
+        <span class="rules">1- put the function in form of aX² + bX + c</span>
+        <span class="rules">2- enter the values of coefficients (a, b, c)</span>
+        <button onclick="negative(req)" id="addSub">±</button>
+        <bdo class="equation">
+          <span class="part1">F(X) = </span>
+          <span class="part2">
+            <input type="number" placeholder="a" id="aInp" onclick="neg(this.id)">
+            X<sup>²</sup> +
+            <input type="number" placeholder="b" id="bInp" onclick="neg(this.id)">
+            X
+            + <input type="number" placeholder="c" id="cInp" onclick="neg(this.id)"></span>
+        </bdo>
+
+        <button onclick="solve()" class="solve-btn">DETERMINE THE SIGN</button>
+      </div>
+    </main>
+
+    <footer>
+      <strong>PROGRAMMED AND DESIGNED BY</strong>
+      <div class="names">
+        <span>AHMED MOATAZ AND MOHAMED MOATAZ</span>
+        <div class="icons">
+          <a href="https://wa.me/number=+201151195604?text=HELLO" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
+          <a href="mailto:ahmeeeedmoataz2008@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+          <a href="https://wa.me/number=+201148335377?text=HELLO" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
+          <a href="mailto:moooohhamed2010@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- solution section -->
+
+  <div id="result">
+    <fieldset>
+      <legend>THE SOLUTION SET</legend>
+      <div id="steps"></div>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>THE SIGN OF FUNCTION</legend>
+      <bdo class="equation"></bdo>
+      <div class="solution-div"></div>
+    </fieldset>
+
+    <fieldset class="numberLine">
+      <legend>THE SIGN ON NUMBER LINE</legend>
+      <div id="number_line"></div>
+    </fieldset>
+    <button onclick="end()" class="end">DONE</button><br><br><br>
+
+    <!-- faq-questions -->
+
+    <div class="questions-container" dir="rtl" lang="ar">
+      <h1>الأسئلة الشائعة</h1>
+      <div class="faq">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleAnswer(this)">
+            ما هو هدف الموقع ؟
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>هدف موقعنا هو توفير منصة شاملة تساهم في تعزيز فهم الدوال التربيعية وتحليلها. نهدف إلى:</p><br>
+            <ul>
+              <li><strong>تسهيل التعلم:</strong>
+                من خلال
+                تقديم موارد تعليمية مبسطة ومفيدة تساعد الطلاب والمعلمين على استيعاب الدوال الرياضية (Functions) بوضوح.</li><br>
+              <li><strong>تحفيز الاهتمام بالرياضيات (Maths):</strong>
+                من خلال
+                إلهام الزوار وتشجيعهم على استكشاف جمال الرياضيات من خلال محتوى تفاعلي ومبتكر.</li>
+            </ul><br>
+            <p style="color: blue;">باختصار، نحن هنا لنجعل تجربة تعلم الدوال التربيعية ممتعة وفعالة للجميع!</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleAnswer(this)">
+            من هو الجمهور المستهدف ؟
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            <h2>الجمهور المستهدف لموقعنا:</h2><br>
+
+            <h3>الطلاب:</h3>
+            <p>الطلاب في جميع المراحل التعليمية الذين يدرسون الرياضيات ويحتاجون لفهم الدوال التربيعية وخصوصا المرحلة الثانوية.</p><br>
+
+            <h3>المعلمون:</h3>
+            <p>المعلمون الذين يبحثون عن موارد إضافية لتدريس موضوع الدوال التربيعية وتحليلها بطريقة مبسطة.</p><br>
+
+            <h3>المهتمون بالرياضيات:</h3>
+            <p>أي شخص لديه اهتمام بتطوير مهاراته في الرياضيات وتحليل الدوال.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleAnswer(this)">
+            هل هذا الموقع مجاني ؟
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            <h3>نعم ، هذا الموقع مجاني بالكامل</h3>
+
+            <p>فقد حرصنا علي تقديم بيئة تعليمية متوفرة للجميع ويسهل الحصول عليها حرصا منا علي إفادة الجميع.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleAnswer(this)">
+            كيف يمكنني استخدام زر السالب والموجب ؟
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>اضغط علي المعامل (coefficient) الذي تريد تغيير قيمته للسالب او الموجب</p><br>
+
+            <p>
+              ثم
+              اضغط علي زر
+              السالب و الموجب</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleAnswer(this)">
+            كيف يمكنني التواصل مع المبرمجين ؟
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              اضغط علي الأيقونات الموجودة في أسفل الصفحة</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <strong>PROGRAMMED AND DESIGNED BY</strong>
+    <div class="names">
+      <span>AHMED MOATAZ AND MOHAMED MOATAZ</span>
+      <div class="icons">
+        <a href="https://wa.me/number=+201151195604?text=HELLO" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
+        <a href="mailto:ahmeeeedmoataz2008@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+        <a href="https://wa.me/number=+201148335377?text=HELLO" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
+        <a href="mailto:moooohhamed2010@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+  <!-- scripts and codes -->
+  <script>
+    // intro
+
+    document.getElementById('closeBtn').addEventListener('click', function() {
+      document.getElementById('intro').style.display = 'none';
+    });
+
+    // website codes
+
+    var aInp = document.getElementById('aInp');
+    var bInp = document.getElementById('bInp');
+    var cInp = document.getElementById('cInp');
+    var addSub = document.getElementById('addSub');
+    var inputs = document.querySelector('.inputs');
+    var result = document.getElementById('result');
+    var equation = document.querySelectorAll('.equation')[1];
+    var solution_div = document.querySelector('.solution-div');
+    var req;
+
+    function neg(id) {
+      addSub.style.display = 'inline';
+      req = id;
+    }
+
+    function negative(req) {
+      document.getElementById(req).value *= -1;
+    }
+
+    var data1;
+    var equation1;
+
+    function solve() {
+      addSub.style.display = 'none';
+
+      var data = {
+        a: aInp.value,
+        b: bInp.value,
+        c: cInp.value,
+      }
+      data1 = data;
+      if (data.a != '' && data.a != 0 && data.b != '' && data.c != '') {
+        result.style.display = 'flex';
+        document.getElementById('footer').style.display = 'flex';
+        document.getElementById('website').style.display = 'none';
+
+        writeEquation();
+        calc();
+        writeSteps();
+        drawNumberLine();
+      } else if (data.a == 0) {
+        alert('PLEASE CHANGE THE VALUE OF COEFFICIENT (a) BECAUSE IF IT IS EQUAL TO ZERO, THE EQUATION WILL NOT BE QUADRATIC BUT IT WILL BECOME A LINEAR EQUATION OF THE FIRST DEGREE...');
+      } else if (data.b == '') {
+        var checkZero = confirm('DO YOU WANT TO SET THE COEFFICIENT (b) TO ZERO?');
+        if (checkZero) {
+          bInp.value = 0;
+        }
+      } else if (data.c == '') {
+        var checkZero = confirm('DO YOU WANT TO SET THE COEFFICIENT (c) TO ZERO?');
+        if (checkZero) {
+          cInp.value = 0;
+        }
+      } else {
+        alert('PLEASE ENTER THE VALUES OF COEFFICIENTS...');
+      }
+    }
+
+    function writeEquation() {
+      if (data1.b > 0 && data1.c > 0) {
+        equation.innerHTML = `
+   <span class="part1">F(X) = </span><span class="part2">
+           ${data1.a}
+           X<sup>²</sup> +
+           ${data1.b}
+           X
+           + 
+           ${data1.c}
+   </span>
+   `;
+      }
+
+      if (data1.b < 0 && data1.c > 0) {
+        equation.innerHTML = `
+   <span class="part1">F(X) = </span><span class="part2">
+           ${data1.a}
+           X<sup>²</sup> <sup>_</sup> 
+           ${data1.b * -1}
+           X
+           + 
+           ${data1.c}
+   </span>
+   `;
+      }
+
+      if (data1.b > 0 && data1.c < 0) {
+        equation.innerHTML = `
+   <span class="part1">F(X) = </span><span class="part2">
+           ${data1.a}
+           X<sup>²</sup> +
+           ${data1.b}
+           X
+           <sup>_</sup>
+           ${data1.c * -1}
+   </span>
+   `;
+      }
+
+      if (data1.b == 0 && data1.c > 0) {
+        equation.innerHTML = `
+   <span class="part1">F(X) = </span><span class="part2">
+           ${data1.a}
+           X<sup>²</sup> + 
+           ${data1.c}
+   </span>
+   `;
+      }
+
+      if (data1.b == 0 && data1.c < 0) {
+        equation.innerHTML = `
+   <span class="part1">F(X) = </span><span class="part2">
+           ${data1.a}
+           X<sup>²</sup> <sup>_</sup> 
+           ${data1.c *-1}
+   </span>
+   `;
+      }
+
+      if (data1.b > 0 && data1.c == 0) {
+        equation.innerHTML = `
+   <span class="part1">F(X) = </span><span class="part2">
+           ${data1.a}
+           X<sup>²</sup> + 
+           ${data1.b} X
+   </span>
+   `;
+      }
+
+      if (data1.b < 0 && data1.c == 0) {
+        equation.innerHTML = `
+   <span class="part1">F(X) = </span><span class="part2">
+           ${data1.a}
+           X<sup>²</sup> <sup>_</sup> 
+           ${data1.b * -1} X
+   </span>
+   `;
+      }
+
+      if (data1.b == 0 && data1.c == 0) {
+        equation.innerHTML = `
+   <span class="part1">F(X) = </span><span class="part2">
+           ${data1.a}
+           X<sup>²</sup>
+   </span>
+   `;
+      }
+
+      if (data1.b < 0 && data1.c < 0) {
+        equation.innerHTML = `
+   <span class="part1">F(X) = </span><span class="part2">
+           ${data1.a}
+           X<sup>²</sup> <sup>_</sup> ${data1.b * -1} X <sup>_</sup> ${data1.c * -1}
+   </span>
+   `;
+      }
+      equation1 = equation.innerHTML;
+    }
+
+    var discriminant1;
+    var y1;
+    var y2;
+
+    function calc() {
+      var solution = '';
+
+      var discriminant = (data1.b * data1.b) - (4 * data1.a * data1.c);
+      discriminant1 = discriminant;
+      var root1 = (-1 * data1.b + Math.sqrt(discriminant)) / (2 * data1.a);
+      var root2 = (-1 * data1.b - Math.sqrt(discriminant)) / (2 * data1.a);
+
+      if (String(root1).length > 5) {
+        root1 = root1.toFixed(4);
+      }
+
+      if (String(root2).length > 5) {
+        root2 = root2.toFixed(4);
+      }
+
+      var x1 = Math.min(root1, root2);
+      var x2 = Math.max(root1, root2);
+      y1 = x1;
+      y2 = x2;
+
+      if (discriminant > 0 && data1.a > 0) {
+        solution = `
+    <bdo class="s">
+    F(X) is <mark>positive</mark> for every<br><br> X ∈ R - [${x1} , ${x2}]
+    </bdo><br>
+
+  <bdo class="s">
+  F(X) is <mark>negative</mark> for every<br><br> X ∈ ]${x1} , ${x2}[
+  </bdo><br>
+
+  <bdo class="s">
+  F(X) equals <mark>zero</mark> for every<br><br> X ∈ {${x1} , ${x2}}
+  </bdo><br>
+`;
+      } else if (discriminant > 0 && data1.a < 0) {
+        solution = `
+    <bdo class="s">
+    F(X) is <mark>positive</mark> for every<br><br> X ∈ ]${x1} , ${x2}[
+    </bdo><br>
+
+  <bdo class="s">
+  F(X) is <mark>negative</mark> for every<br><br> X ∈ R - [${x1} , ${x2}]
+  </bdo><br>
+
+  <bdo class="s">
+  F(X) equals <mark>zero</mark> for every<br><br> X ∈ {${x1} , ${x2}}
+  </bdo><br>
+`;
+      } else if (discriminant == 0 && data1.a > 0) {
+        solution = `
+    <bdo class="s">
+    F(X) is <mark>positive</mark> for every<br><br> X ∈ R - {${root1}}
+    </bdo><br>
+
+  <bdo class="s">
+  F(X) equals <mark>zero</mark> at<br><br> X = ${root1}
+  </bdo><br>
+`;
+      } else if (discriminant == 0 && data1.a < 0) {
+        solution = `
+    <bdo class="s">
+    F(X) is <mark>negative</mark> for every<br><br> X ∈ R - {${root1}}
+    </bdo><br>
+
+  <bdo class="s">
+  F(X) equals <mark>zero</mark> at<br><br> X = ${root1}
+  </bdo><br>
+`;
+      } else if (discriminant < 0 && data1.a > 0) {
+        solution = `
+    <bdo class="s">
+    F(X) is <mark>positive</mark> for every<br><br> X ∈ R
+    </bdo><br>
+`;
+      } else if (discriminant < 0 && data1.a < 0) {
+        solution = `
+    <bdo class="s">
+    F(X) is <mark>negative</mark> for every<br><br> X ∈ R
+    </bdo><br>
+`;
+      }
+
+      solution_div.innerHTML = solution;
+    }
+
+    var steps = document.getElementById('steps');
+    var number_line = document.getElementById('number_line');
+
+    function writeSteps() {
+      if (discriminant1 < 0) {
+        steps.innerHTML = `
+  <p class="red">${equation1}</p>
+  <p>∴ a = ${data1.a} , b = ${data1.b} , c = ${data1.c}</p>
+  <p>∵ The discriminant = b<sup style="color: black;">2</sup> - 4 * a * c</p>
+        <p>∴ The discriminant = ${data1.b}<sup style="color: black;">2</sup> - 4 * ${data1.a} * ${data1.c} = ${discriminant1}</p>
+        <p>∴ The discriminant < 0</p><br>
+            <p class="red">∴ There is no real roots</p>`;
+      } else if (discriminant1 == 0) {
+        steps.innerHTML = `
+  <p class="red">${equation1}</p>
+    <p>∴ a = ${data1.a} , b = ${data1.b} , c = ${data1.c}</p>
+  <p>∵ The discriminant = b<sup style="color: black;">2</sup> - 4 * a * c</p>
+        <p>∴ The discriminant = ${data1.b}<sup style="color: black;">2</sup> - 4 * ${data1.a} * ${data1.c} = ${discriminant1}</p>
+        <p>∴ The discriminant = 0</p>
+            <p style="color: blue;">∴ The root of the equation: <br> F(X) = 0 is X = ${y1}</p><br>
+            <p class="red">∴ The S.S. = {${y1}}</p>
+  `;
+      } else if (discriminant1 > 0) {
+        steps.innerHTML = `
+  <p class="red">${equation1}</p>
+    <p>∴ a = ${data1.a} , b = ${data1.b} , c = ${data1.c}</p> <p> ∵ The discriminant = b<sup style = "color: black;">2</sup> - 4 * a * c</p>
+        <p>∴ The discriminant = ${data1.b}<sup style="color: black;">2</sup> - 4 * ${data1.a} * ${data1.c} = ${discriminant1}</p>
+        <p>∴ The discriminant > 0</p>
+            <p style="color: blue;">∴ The roots of the equation: F(X) = 0 are <br> X = ${y1} , X = ${y2}</p><br>
+            <p class="red">∴ The S.S. = {${y1} , ${y2}}</p>
+  `;
+      }
+    }
+
+    function drawNumberLine() {
+      var z1 = y1;
+      var z2 = y2;
+
+      if (String(z1).length > 4) {
+        z1 = y1.toFixed(3);
+      }
+
+      if (String(z2).length > 4) {
+        z2 = y2.toFixed(3);
+      }
+
+      if (discriminant1 > 0 && data1.a > 0) {
+        number_line.innerHTML = `
+    <svg width="300px" height="200px">
+
+          <path d="M10 100 290 100 270 90 290 100 270 110 290 100 40 100 40 80 40 120 40 100 60 90 40 100 60 110 40 100 100 100 100 80 100 120 100 100 200 100 200 80 200 120" fill="none" stroke="black" stroke-width="4"></path>
+
+          <circle r="15" cx="100" cy="65" fill="none" stroke="black"></circle>
+
+          <circle r="15" cx="100" cy="135" fill="none" stroke="black"></circle>
+
+          <circle r="15" cx="200" cy="65" fill="none" stroke="black"></circle>
+
+          <circle r="15" cx="200" cy="135" fill="none" stroke="black"></circle>
+
+          <text x="280" y="80" font-family="Arial" font-size="18" text-anchor="middle" fill="black">∞</text>
+
+          <text x="50" y="80" font-family="Arial" font-size="18" text-anchor="middle" fill="black">-∞</text>
+
+          <text x="20" y="90" font-family="Arial" font-size="18" text-anchor="middle" fill="red">x</text>
+
+          <text x="20" y="120" font-family="Arial" font-size="18" text-anchor="middle" fill="blue">f(x)</text>
+
+          <text x="100" y="70" font-family="Arial" font-size="16" text-anchor="middle" fill="red">${z1}</text>
+
+          <text x="200" y="70" font-family="Arial" font-size="16" text-anchor="middle" fill="red">${z2}</text>
+
+          <text x="100" y="140" font-family="Arial" font-size="16" text-anchor="middle" fill="blue">0</text>
+
+          <text x="200" y="140" font-family="Arial" font-size="16" text-anchor="middle" fill="blue">0</text>
+
+          <text x="80" y="120" font-family="Arial" font-size="16" text-anchor="middle" fill="red">+ +</text>
+
+          <text x="150" y="120" font-family="Arial" font-size="20" text-anchor="middle" fill="blue">- - - - - - -</text>
+
+          <text x="240" y="120" font-family="Arial" font-size="16" text-anchor="middle" fill="red">+ + + + +</text>
+        </svg>
+    `;
+
+      } else if (discriminant1 > 0 && data1.a < 0) {
+        number_line.innerHTML = `
+    <svg width="300px" height="200px">
+
+          <path d="M10 100 290 100 270 90 290 100 270 110 290 100 40 100 40 80 40 120 40 100 60 90 40 100 60 110 40 100 100 100 100 80 100 120 100 100 200 100 200 80 200 120" fill="none" stroke="black" stroke-width="4"></path>
+
+          <circle r="15" cx="100" cy="65" fill="none" stroke="black"></circle>
+
+          <circle r="15" cx="100" cy="135" fill="none" stroke="black"></circle>
+
+          <circle r="15" cx="200" cy="65" fill="none" stroke="black"></circle>
+
+          <circle r="15" cx="200" cy="135" fill="none" stroke="black"></circle>
+
+          <text x="280" y="80" font-family="Arial" font-size="18" text-anchor="middle" fill="black">∞</text>
+
+          <text x="50" y="80" font-family="Arial" font-size="18" text-anchor="middle" fill="black">-∞</text>
+
+          <text x="20" y="90" font-family="Arial" font-size="18" text-anchor="middle" fill="red">x</text>
+
+          <text x="20" y="120" font-family="Arial" font-size="18" text-anchor="middle" fill="blue">f(x)</text>
+
+          <text x="100" y="70" font-family="Arial" font-size="16" text-anchor="middle" fill="red">${z1}</text>
+
+          <text x="200" y="70" font-family="Arial" font-size="16" text-anchor="middle" fill="red">${z2}</text>
+
+          <text x="100" y="140" font-family="Arial" font-size="16" text-anchor="middle" fill="blue">0</text>
+
+          <text x="200" y="140" font-family="Arial" font-size="16" text-anchor="middle" fill="blue">0</text>
+
+          <text x="80" y="120" font-family="Arial" font-size="20" text-anchor="middle" fill="red">- -</text>
+
+          <text x="150" y="120" font-family="Arial" font-size="16" text-anchor="middle" fill="blue">+ + + + + +</text>
+
+          <text x="240" y="120" font-family="Arial" font-size="20" text-anchor="middle" fill="red">- - - - -</text>
+        </svg>
+    `;
+
+
+      } else if (discriminant1 == 0 && data1.a > 0) {
+        number_line.innerHTML = `
+    <svg width="300px" height="200px">
+
+          <path d="M10 100 290 100 270 90 290 100 270 110 290 100 40 100 40 80 40 120 40 100 60 90 40 100 60 110 40 100 160 100 160 120 160 80" fill="none" stroke="black" stroke-width="4"></path>
+
+          <circle r="15" cx="160" cy="65" fill="none" stroke="black"></circle>
+
+          <circle r="15" cx="160" cy="135" fill="none" stroke="black"></circle>
+
+          <text x="280" y="80" font-family="Arial" font-size="18" text-anchor="middle" fill="black">∞</text>
+
+          <text x="50" y="80" font-family="Arial" font-size="18" text-anchor="middle" fill="black">-∞</text>
+
+          <text x="20" y="90" font-family="Arial" font-size="18" text-anchor="middle" fill="red">x</text>
+
+          <text x="20" y="120" font-family="Arial" font-size="18" text-anchor="middle" fill="blue">f(x)</text>
+
+          <text x="160" y="70" font-family="Arial" font-size="16" text-anchor="middle" fill="red">${z1}</text>
+
+          <text x="160" y="140" font-family="Arial" font-size="16" text-anchor="middle" fill="blue">0</text>
+
+          <text x="105" y="120" font-family="Arial" font-size="16" text-anchor="middle" fill="red">+ + + + + + +</text>
+
+          <text x="215" y="120" font-family="Arial" font-size="16" text-anchor="middle" fill="red">+ + + + + + +</text>
+        </svg>
+    `;
+
+      } else if (discriminant1 == 0 && data1.a < 0) {
+        number_line.innerHTML = `
+    <svg width="300px" height="200px">
+
+          <path d="M10 100 290 100 270 90 290 100 270 110 290 100 40 100 40 80 40 120 40 100 60 90 40 100 60 110 40 100 160 100 160 120 160 80" fill="none" stroke="black" stroke-width="4"></path>
+
+          <circle r="15" cx="160" cy="65" fill="none" stroke="black"></circle>
+
+          <circle r="15" cx="160" cy="135" fill="none" stroke="black"></circle>
+
+          <text x="280" y="80" font-family="Arial" font-size="18" text-anchor="middle" fill="black">∞</text>
+
+          <text x="50" y="80" font-family="Arial" font-size="18" text-anchor="middle" fill="black">-∞</text>
+
+          <text x="20" y="90" font-family="Arial" font-size="18" text-anchor="middle" fill="red">x</text>
+
+          <text x="20" y="120" font-family="Arial" font-size="18" text-anchor="middle" fill="blue">f(x)</text>
+
+          <text x="160" y="70" font-family="Arial" font-size="16" text-anchor="middle" fill="red">${z1}</text>
+
+          <text x="160" y="140" font-family="Arial" font-size="16" text-anchor="middle" fill="blue">0</text>
+
+          <text x="105" y="120" font-family="Arial" font-size="20" text-anchor="middle" fill="red">- - - - - - -</text>
+
+          <text x="215" y="120" font-family="Arial" font-size="20" text-anchor="middle" fill="red">- - - - - - - -</text>
+        </svg>
+    `;
+
+      } else if (discriminant1 < 0 && data1.a > 0) {
+        number_line.innerHTML = `
+    <svg width="300px" height="200px">
+
+          <path d="M10 100 290 100 270 90 290 100 270 110 290 100 40 100 40 80 40 120 40 100 60 90 40 100 60 110 40" fill="none" stroke="black" stroke-width="4"></path>
+
+          <text x="280" y="80" font-family="Arial" font-size="18" text-anchor="middle" fill="black">∞</text>
+
+          <text x="50" y="80" font-family="Arial" font-size="18" text-anchor="middle" fill="black">-∞</text>
+
+          <text x="20" y="90" font-family="Arial" font-size="18" text-anchor="middle" fill="red">x</text>
+
+          <text x="20" y="120" font-family="Arial" font-size="18" text-anchor="middle" fill="blue">f(x)</text>
+
+          <text x="115" y="120" font-family="Arial" font-size="16" text-anchor="middle" fill="red">+ + + + + + + +</text>
+
+          <text x="220" y="120" font-family="Arial" font-size="16" text-anchor="middle" fill="red">+ + + + + + + +</text>
+        </svg>
+    `;
+
+      } else if (discriminant1 < 0 && data1.a < 0) {
+        number_line.innerHTML = `
+    <svg width="300px" height="200px">
+
+          <path d="M10 100 290 100 270 90 290 100 270 110 290 100 40 100 40 80 40 120 40 100 60 90 40 100 60 110 40" fill="none" stroke="black" stroke-width="4"></path>
+
+          <text x="280" y="80" font-family="Arial" font-size="18" text-anchor="middle" fill="black">∞</text>
+
+          <text x="50" y="80" font-family="Arial" font-size="18" text-anchor="middle" fill="black">-∞</text>
+
+          <text x="20" y="90" font-family="Arial" font-size="18" text-anchor="middle" fill="red">x</text>
+
+          <text x="20" y="120" font-family="Arial" font-size="18" text-anchor="middle" fill="blue">f(x)</text>
+
+          <text x="110" y="120" font-family="Arial" font-size="20" text-anchor="middle" fill="red">- - - - - - - -</text>
+
+          <text x="215" y="120" font-family="Arial" font-size="20" text-anchor="middle" fill="red">- - - - - - - -</text>
+        </svg>
+    `;
+      }
+    }
+
+    function end() {
+      result.style.display = 'none';
+      document.getElementById('footer').style.display = 'none';
+      document.getElementById('website').style.display = 'grid';
+      aInp.value = '';
+      bInp.value = '';
+      cInp.value = '';
+    }
+
+    // faq-questions
+
+    function toggleAnswer(element) {
+      const answer = element.nextElementSibling;
+      const arrow = element.querySelector('.arrow');
+
+      if (answer.style.display === "block") {
+        answer.style.display = "none";
+        element.classList.remove('open');
+      } else {
+        answer.style.display = "block";
+        element.classList.add('open');
+      }
+    }
+  </script>
+</body>
+
+</html>
